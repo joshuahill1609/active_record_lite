@@ -15,9 +15,9 @@ end
 
 class Human < SQLObject
   set_table_name("humans")
-  set_attrs(:id, :fname, :lname, :house_id)
+  set_attrs(:fname, :lname, :house_id)
 
-  has_many :cats, :foreign_key => :owner_id
+  has_many :cats, :class_name => 'Cat', :foreign_key => :owner_id
   belongs_to :house
 end
 

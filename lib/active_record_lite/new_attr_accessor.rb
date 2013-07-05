@@ -5,8 +5,8 @@ class Object
         instance_variable_get("@#{symbol}")
       end
 
-      define_method("#{symbols}=") do |value|
-        instance_variable_set("@#{symbols}", value)
+      define_method("#{symbol}=") do |value|
+        instance_variable_set("@#{symbol}", value)
       end
     end
   end
